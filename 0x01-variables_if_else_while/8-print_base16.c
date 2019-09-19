@@ -7,11 +7,15 @@
 int main(void)
 {
 	int a;
+	char b;
 
-	while (a != EOF)
+	for (a = 0 ; a <= 9 ; a++)
 	{
 		putchar(a % 16 + '0');
-		a++;
+	}
+	for (b = 'a' ; b <= 'f' ; b++)
+	{
+		putchar(b);
 	}
 
 	putchar('\n');
