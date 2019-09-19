@@ -1,0 +1,18 @@
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always (Success)
+ */
+int main(void)
+{
+	char a;
+
+	for (a = 0 ; a <= 9 ; a++)
+	{
+		putchar(a % 10 + '0');
+	}
+
+	putchar('\n');
+	return (0);
+}
