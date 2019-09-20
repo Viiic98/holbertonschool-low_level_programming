@@ -8,13 +8,11 @@ int main(void)
 {
 	int a, b;
 
-	for (a = 0 ; a <= 9 ; a++)
+	for (a = 0 ; a <= 8 ; a++)
 	{
 		for (b = 0 ; b <= 9 ; b++)
 		{
-			if (a != b)
-			{
-				if (a != 1 && b != 0 && a < 9)
+				if (a != b && b != 0 && a < b)
 				{
 					putchar(a % 10 + '0');
 					putchar(b % 10 + '0');
@@ -25,7 +23,6 @@ int main(void)
 						putchar(' ');
 					}
 				}
-			}
 		}
 	}
 
