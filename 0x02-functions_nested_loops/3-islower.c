@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ * _islower - Entry
+ *
+ * Return: Always display true for lowercase characters
+ */
 int _islower(int c)
 {
 	int i, a;
@@ -9,7 +13,8 @@ int _islower(int c)
 		if (c != i)
 		{
 			a = 0;
-		}else
+		}
+		else
 		{
 			a = 1;
 			break;
