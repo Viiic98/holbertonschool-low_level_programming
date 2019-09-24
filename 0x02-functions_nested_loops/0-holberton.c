@@ -5,14 +5,15 @@
  * Return: Always a string (Success)
  */
 
-void holberton(void)
+int main(void)
 {
 	char H[] = "Holberton";
 	int i, c = sizeof(H);
 
-	for (i = 0; i <= c; i++)
+	for (i = 0; i < c; i++)
 	{
 		_putchar(H[i]);
 	}
 	_putchar('\n');
+	return (0);
 }
