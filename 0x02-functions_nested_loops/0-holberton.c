@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ * holberton - Entry point
+ *
+ * Return: Always a string (Success)
+ */
 void holberton(void)
 {
 	char H[] = "Holberton";
