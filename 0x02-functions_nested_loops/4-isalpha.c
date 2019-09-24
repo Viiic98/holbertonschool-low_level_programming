@@ -1,5 +1,11 @@
 #include "holberton.h"
-
+/**
+ * _isalpha - Entry c
+ *
+ * @c: input variable
+ *
+ * Return: Always return 1 for alpha types
+ */
 int _isalpha(int c)
 {
 	int i, a;
@@ -16,7 +22,7 @@ int _isalpha(int c)
 			break;
 		}
 	}
-	if(a == 0)
+	if (a == 0)
 	{
 		for (i = 'A'; i <=  'Z'; i++)
 		{

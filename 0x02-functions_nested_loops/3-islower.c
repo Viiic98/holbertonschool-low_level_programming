@@ -2,8 +2,11 @@
 /**
  * _islower - Entry
  *
+ * @c: input variable
+ *
  * Return: Always display true for lowercase characters
  */
+
 int _islower(int c)
 {
 	int i, a;
