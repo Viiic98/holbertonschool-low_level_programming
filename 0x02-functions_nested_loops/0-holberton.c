@@ -1,9 +1,15 @@
 #include "holberton.h"
 /**
- * holberton - Entry point
+ * main - Entry point
  *
  * Return: Always a string (Success)
  */
+void holberton(void);
+int main(void)
+{
+	holberton();
+	return (0);
+}
 void holberton(void)
 {
 	char H[] = "Holberton";
