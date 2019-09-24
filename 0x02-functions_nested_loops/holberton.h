@@ -25,3 +25,5 @@ void times_table(void);
 int add(int, int);
 /* The tables */
 void times_table(void);
+/* Natural numbers until 98*/
+void print_to_98(int n);
