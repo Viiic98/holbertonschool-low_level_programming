@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * holberton - Entry point
+ * main - Entry point
  *
  * Return: Always a string (Success)
  */
