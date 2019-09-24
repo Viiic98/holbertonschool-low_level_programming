@@ -6,7 +6,7 @@
  */
 void jack_bauer(void)
 {
-	int a, b, c, d, finish;
+	int a, b, c, d;
 
 	for (a = 0; a <= 2; a++)
 	{
@@ -27,16 +27,11 @@ void jack_bauer(void)
 					}
 					else
 					{
-						finish = 1;
 						break;
 					}
 				}
-				if (finish == 1)
-				{
-					break;
-				}
 			}
-			if (finish == 1)
+			if (a == 2 && b == 3)
 			{
 				break;
 			}
