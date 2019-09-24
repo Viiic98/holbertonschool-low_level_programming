@@ -10,7 +10,7 @@ int main(void)
 	char H[] = "Holberton";
 	int i, c = sizeof(H);
 
-	for (i = 0; i < c; i++)
+	for (i = 0; i < (c-1); i++)
 	{
 		_putchar(H[i]);
 	}
