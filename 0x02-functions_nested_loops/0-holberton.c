@@ -1,16 +1,4 @@
 #include "holberton.h"
-/**
- * main- Entry point
- *
- * Return: Always 0 (Success)
- */
-void holberton(void);
-
-int main()
-{
-	holberton();
-	return (0);
-}
 
 void holberton(void)
 {

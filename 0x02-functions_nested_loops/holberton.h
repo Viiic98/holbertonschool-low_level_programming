@@ -13,3 +13,7 @@ int _islower(int c);
 int _isalpha(int c);
 /* Displaying the sign of a number */
 int print_sign(int n);
+/* The absolute value */
+int _abs(int);
+/* The last digit */
+int print_last_digit(int);
