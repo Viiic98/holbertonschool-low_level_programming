@@ -34,4 +34,7 @@ void print_square(int);
 /* Drawing triangles */
 void print_triangle(int);
 
+/* Printing integers */
+void print_number(int);
+
 #endif /* HOLBERTON_H */
