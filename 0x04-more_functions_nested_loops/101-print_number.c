@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * print_number - Function for display integers
  *
@@ -8,37 +9,43 @@
  */
 void print_number(int n)
 {
-	int size, a, i, k;
+	int size, i, k, a;
 
 	size = 0;
 
-	if (n != 0)
+
+	if (n == 0)
 	{
+		_putchar('0');
+	}
+	else
+	{
+
 		if (n < 0)
 		{
 			n = n * -1;
 			_putchar('-');
 		}
-
+		
 		a = n;
-		k = 1;
-
+		k = 0,1;
+		
 		while (a != 0)
 		{
 			a = a / 10;
 			size++;
 			k = k * 10;
 		}
-
+		printf("%d\n", k);
 		for (i = 0; i < size; i++)
 		{
-			n = n %  k;
-			k = k / 10;
-			_putchar(n / k + '0');
+		
+
+			/*_putchar(n / k + '0');*/
+			n = n % k;
+			k = k / 10;		
 		}
 	}
-	else
-	{
-		_putchar('0');
-	}
+	
+	
 }
