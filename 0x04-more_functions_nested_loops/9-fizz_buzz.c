@@ -3,7 +3,7 @@
 /**
  * main - Displaying the numbers from 0 to 100
  *
- * Return:
+ * Return: Print the numbers and change the multiplies
  */
 int main(void)
 {
@@ -30,5 +30,5 @@ int main(void)
 	}
 	printf("\n");
 
-	return(0);
+	return (0);
 }
