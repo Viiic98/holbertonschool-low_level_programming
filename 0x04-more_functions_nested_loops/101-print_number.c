@@ -20,19 +20,15 @@ void print_number(int n)
 	}
 
 	a = n;
+	k = 1;
 
 	while (a != 0)
 	{
 		a = a / 10;
 		size++;
-	}
-
-	k = 1;
-
-	for (i = 0; i < size; i++)
-	{
 		k = k * 10;
 	}
+
 
 	if (n != 0)
 	{
