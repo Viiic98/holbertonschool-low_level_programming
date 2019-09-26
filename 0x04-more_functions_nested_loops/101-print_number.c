@@ -12,25 +12,24 @@ void print_number(int n)
 
 	size = 0;
 
-	if (n < 0)
-	{
-		n = n * -1;
-		_putchar('-');
-	}
-
-	a = n;
-	k = 1;
-
-	while (a != 0)
-	{
-		a = a / 10;
-		size++;
-		k = k * 10;
-	}
-
-
 	if (n != 0)
 	{
+		if (n < 0)
+		{
+			n = n * -1;
+			_putchar('-');
+		}
+
+		a = n;
+		k = 1;
+
+		while (a != 0)
+		{
+			a = a / 10;
+			size++;
+			k = k * 10;
+		}
+
 		for (i = 0; i < size; i++)
 		{
 			n = n %  k;
@@ -42,5 +41,4 @@ void print_number(int n)
 	{
 		_putchar('0');
 	}
-	_putchar('\n');
 }
