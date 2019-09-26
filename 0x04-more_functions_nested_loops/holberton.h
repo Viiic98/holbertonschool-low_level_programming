@@ -31,4 +31,7 @@ void print_diagonal(int);
 /* Drawing a square */
 void print_square(int);
 
+/* Drawing triangles */
+void print_triangle(int);
+
 #endif /* HOLBERTON_H */
