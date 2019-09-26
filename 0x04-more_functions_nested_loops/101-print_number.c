@@ -4,7 +4,7 @@
  *
  * @n: input variable
  *
- * Return:
+ * Return: Display integers
  */
 void print_number(int n)
 {
