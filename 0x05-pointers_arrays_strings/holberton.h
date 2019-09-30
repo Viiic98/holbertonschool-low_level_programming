@@ -11,8 +11,15 @@ void reset_to_98(int);
 void swap_int(int*, int*);
 
 /* Size of a string */
-int _strlen(char *s);
+int _strlen(char*);
 
-/* Another form to print */
-void _puts(char *str);
+/* Printing a string character per character */
+void _puts(char*);
+
+/* Printing a string in reverse */
+void print_rev(char*);
+
+/* Printing the word right and reverse */
+void rev_string(char*);
+
 #endif /* HOLBERTON_H */
