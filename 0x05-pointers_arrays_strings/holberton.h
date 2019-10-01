@@ -22,4 +22,13 @@ void print_rev(char*);
 /* Printing the word right and reverse */
 void rev_string(char*);
 
+/* Printin every other variable - 2 per 2 */
+void puts2(char*);
+
+/*  */
+void puts_half(char*);
+
+/* Printing an array from a pointer */
+void print_array(int*, int);
+
 #endif /* HOLBERTON_H */
