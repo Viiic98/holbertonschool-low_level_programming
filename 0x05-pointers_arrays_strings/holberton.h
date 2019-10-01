@@ -31,4 +31,7 @@ void puts_half(char*);
 /* Printing an array from a pointer */
 void print_array(int*, int);
 
+/* Copy the value */
+char *_strcpy(char*, char*);
+
 #endif /* HOLBERTON_H */
