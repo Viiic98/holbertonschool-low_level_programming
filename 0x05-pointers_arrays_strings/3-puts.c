@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _puts - Print the sttring with put
  *
@@ -13,8 +12,8 @@ void _puts(char *str)
 
 	while (str[c] != '\0')
 	{
-		putchar(str[c]);
+		_putchar(str[c]);
 		c++;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
