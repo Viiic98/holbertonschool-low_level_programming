@@ -5,7 +5,7 @@
  * @dest: Pointer that will recieve the value
  * @src: String that will be copiest
  *
- * Return: The string copied
+ * Return: the pointer to dest
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -18,5 +18,6 @@ char *_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i + 1] = '\0';
 	return (dest);
 }
