@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * rev_string - Printing a string in reverse
  *
@@ -9,23 +8,20 @@
  */
 void rev_string(char *s)
 {
-	int c, i;
-	char w[500];
+	char a;
+	int i, l;
 
-	i = 0;
-	c = 0;
+	l = 0;
 
-	while (s[i] != '\0')
+	while (s[l] != '\0')
 	{
-		w[i] = s[i];
-		i++;
+		l++;
 	}
-	i--;
-
-	while (w[i] != '\0')
+	l--;
+	for (i = 0; i <= l / 2; i++)
 	{
-		s[c] = w[i];
-		i--;
-		c++;
+		a = s[l - i];
+		s[l - i] = s[i];
+		s[i] = a;
 	}
 }
