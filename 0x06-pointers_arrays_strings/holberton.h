@@ -21,4 +21,7 @@ void reverse_array(int*, int);
 
 /* From lowercase to uppercase */
 char *string_toupper(char *);
+
+/* Capitalizing all words */
+char *cap_string(char *);
 #endif /* HOLBERTON_H */
