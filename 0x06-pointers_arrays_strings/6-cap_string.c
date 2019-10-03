@@ -10,6 +10,7 @@ char *cap_string(char *s)
 {
 	int i, j;
 	char e1[] = " \t\n,;.!?\"(){}";
+
 	i = 0;
 
 	while (s[i] != '\0')
@@ -27,6 +28,6 @@ char *cap_string(char *s)
 		}
 		i++;
 	}
-	s[i] = '\0';
+
 	return (s);
 }
