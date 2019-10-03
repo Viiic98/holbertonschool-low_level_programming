@@ -19,4 +19,6 @@ int _strcmp(char*, char*);
 /* Reverse a integer array */
 void reverse_array(int*, int);
 
+/* From lowercase to uppercase */
+char *string_toupper(char *);
 #endif /* HOLBERTON_H */
