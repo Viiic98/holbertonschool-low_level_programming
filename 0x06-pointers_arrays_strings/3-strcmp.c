@@ -5,7 +5,7 @@
  * @s1: First string that will be compared
  * @s2: Second string that will be compared
  *
- * Return:
+ * Return: Integer depends that the ASCII table
  */
 int _strcmp(char *s1, char *s2)
 {
