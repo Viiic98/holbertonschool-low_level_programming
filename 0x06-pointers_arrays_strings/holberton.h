@@ -1,6 +1,9 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
+/* Putchar function */
+int _putchar(char);
+
 /* Concatenate two strings */
 char *_strcat(char*, char*);
 
@@ -12,4 +15,8 @@ char *_strncpy(char*, char*, int);
 
 /* Comparing two strings */
 int _strcmp(char*, char*);
+
+/* Reverse a integer array */
+void reverse_array(int*, int);
+
 #endif /* HOLBERTON_H */
