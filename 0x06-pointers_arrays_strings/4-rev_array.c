@@ -1,12 +1,11 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * reverse_array - Function that reverse an integer array
  *
- * @a:
- * @n:
+ * @a: Address of the array
+ * @n: Size of the array
  *
- * Return: The array printed on reverse
+ * Return: Swap an integer array
  */
 void reverse_array(int *a, int n)
 {
@@ -15,10 +14,9 @@ void reverse_array(int *a, int n)
 	n--;
 
 	for (i = 0; i != n; n--, i++)
-	{	       
+	{
 		temp = a[i];
 		a[i] = a[n];
 		a[n] = temp;
 	}
-	
 }
