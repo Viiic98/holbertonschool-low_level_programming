@@ -24,4 +24,10 @@ char *string_toupper(char *);
 
 /* Capitalizing all words */
 char *cap_string(char *);
+
+/* Encoding a string */
+char *leet(char *);
+
+/* Encoding another string */
+char *rot13(char *);
 #endif /* HOLBERTON_H */
