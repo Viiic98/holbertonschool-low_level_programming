@@ -10,4 +10,6 @@ char *_strncat(char*, char*, int n);
 /* Function that copies a string */
 char *_strncpy(char*, char*, int);
 
+/* Comparing two strings */
+int _strcmp(char*, char*);
 #endif /* HOLBERTON_H */
