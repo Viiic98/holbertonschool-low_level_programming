@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * rot13 - Function that encode with rot13
  *
@@ -14,11 +15,13 @@ char *rot13(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j <= 51; j++)
+		for (j = 0; e1[j] != '\0'; j++)
 		{
+
 			if (s[i] == e1[j])
 			{
 				s[i] = e2[j];
+				break;
 			}
 		}
 	}
