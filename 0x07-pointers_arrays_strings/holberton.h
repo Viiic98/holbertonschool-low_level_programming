@@ -18,4 +18,7 @@ unsigned int _strspn(char *s, char *accept);
 
 /* sets the value of a char */
 void set_string(char **s, char *to);
+
+/* Function that print the characters after any ocurrence */
+char *_strpbrk(char *s, char *accept);
 #endif /* HOLBERTON.H */
