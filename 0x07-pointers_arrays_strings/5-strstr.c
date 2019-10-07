@@ -19,10 +19,12 @@ char *_strstr(char *haystack, char *needle)
 		if (haystack[i] == needle[j])
 		{
 			j++;
-			if (haystack[i] == haystack[i + 1])
-			{
-				i = i + 1;
-			}
+			i++;
+			if (haystack[i] == haystack[i - 1])
+			{}
+			else
+				i--;
+
 			if (needle[j] == '\0')
 			{
 				return (haystack + (i - (j - 1)));
