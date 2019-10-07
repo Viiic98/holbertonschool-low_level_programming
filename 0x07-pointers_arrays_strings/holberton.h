@@ -21,4 +21,7 @@ void set_string(char **s, char *to);
 
 /* Function that print the characters after any ocurrence */
 char *_strpbrk(char *s, char *accept);
+
+/* Function that search for any word ocurrence */
+char *_strstr(char *haystack, char *needle);
 #endif /* HOLBERTON.H */
