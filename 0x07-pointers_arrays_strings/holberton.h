@@ -24,4 +24,7 @@ char *_strpbrk(char *s, char *accept);
 
 /* Function that search for any word ocurrence */
 char *_strstr(char *haystack, char *needle);
+
+/* print the chess board */
+void print_chessboard(char (*a)[8]);
 #endif /* HOLBERTON.H */
