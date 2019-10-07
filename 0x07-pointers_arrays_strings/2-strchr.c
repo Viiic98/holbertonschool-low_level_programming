@@ -3,10 +3,10 @@
 /**
  * _strchr - Localizate a character in any string
  *
- * @s:
- * @c:
+ * @s: pointer to string
+ * @c: character that will be searched in the string
  *
- * Return:
+ * Return: address of the character
  */
 char *_strchr(char *s, char c)
 {
@@ -24,7 +24,7 @@ char *_strchr(char *s, char c)
 	}
 	if (s[i] == '\0')
 	{
-		return NULL;
+		return (NULL);
 	}
 	return (s + i);
 }
