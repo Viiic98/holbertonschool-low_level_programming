@@ -33,4 +33,5 @@ int wildcmp(char *s1, char *s2);
 
 /* */
 int _prime(int n, int i);
+int go_over(int n, int i);
 #endif /* HOLBERTON_H */
