@@ -1,10 +1,11 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
+ * is_palindrome - Main
  *
+ * @s: string
  *
- *
- *
+ * Return: 1 for palindrome
  */
 int is_palindrome(char *s)
 {
@@ -12,11 +13,15 @@ int is_palindrome(char *s)
 
 	a = go_over_string(s, 0) - 1;
 	b = _compar(s, 0, a);
-	
-
 	return (b);
 }
-int go_over_string(char* s, int i)
+/**
+ * go_over_string - Syze
+ * @s: string
+ * @i: index
+ * Return: 1 for palindrome
+ */
+int go_over_string(char *s, int i)
 {
 	int a;
 
@@ -27,11 +32,18 @@ int go_over_string(char* s, int i)
 	}
 	else
 		return (0);
-	
+
 	return (a);
 
 }
-int _compar(char* s, int i, int j)
+/**
+ * _compar - palindrome
+ * @s: string
+ * @i: indrex
+ * @j: size
+ * Return: 1 for palindrome
+ */
+int _compar(char *s, int i, int j)
 {
 	int a;
 
