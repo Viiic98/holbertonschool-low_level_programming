@@ -27,11 +27,12 @@ int is_prime_number(int n);
 
 /**/
 int is_palindrome(char *s);
-
 /**/
 int wildcmp(char *s1, char *s2);
 
 /* */
 int _prime(int n, int i);
 int go_over(int n, int i);
+int go_over_string(char*, int);
+int _compar(char*, int, int);
 #endif /* HOLBERTON_H */
