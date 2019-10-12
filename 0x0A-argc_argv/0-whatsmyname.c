@@ -1,6 +1,13 @@
 #include "holberton.h"
-#include <stdio.h>
-int main(int argc, char* argv[])
+/**
+ * main - Storing arguments
+ *
+ * @argc: number of arguments
+ * @argv: arguments stored
+ *
+ * Return: Printing each argument
+ */
+int main(int argc, char *argv[])
 {
 	while (*argv[argc - 1] != '\0')
 	{
