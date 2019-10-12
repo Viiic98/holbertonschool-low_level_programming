@@ -1,28 +1,27 @@
 #include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
+ * main - Store arguments
  *
+ * @argc: number of arguments
+ * @argv: value of arguments
  *
- *
+ * Return: multiplies between two values
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int mul;
 
-	if (argc == 2)
+	if (argc == 3)
 	{
-		mul = argv[argc - 1] * argv[argc];
-		_putchar(mul + '0');
-	}	
-	else
-	{	
-		_putchar('E');
-		_putchar('r');
-		_putchar('r');
-		_putchar('o');
-		_putchar('r');
-		_putchar('\n');
-		return (1);
+		mul = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", mul);
 	}
-	_putchar('\n');
+	else
+		printf("Error\n");
+
+
+
 	return (0);
 }
