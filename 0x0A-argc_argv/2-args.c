@@ -1,10 +1,13 @@
 #include "holberton.h"
 /**
+ * main - Storing arguments
  *
+ * @argc: number of arguments
+ * @argv: value of arguments
  *
- *
+ * Return: value of each argument
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
