@@ -11,9 +11,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, add, s;
+	int i, add, s, j;
 
-	i = 1, add = 0, s = 0;
+	i = 1, add = 0, s = 0, j = 0;
 
 	if (argc == 1)
 	{
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 			if (*argv[i] >= 48 && *argv[i] <= 57)
 			{
 				if (*(argv[i] + 1) != '\0')
-					++argv[i];
+					++argv[i], j += 1;
 				else
 					break;
 			}
@@ -43,11 +43,10 @@ int main(int argc, char *argv[])
 			}
 		}
 		if (s == 1)
-			add -= atoi(argv[i]);
+			add -= atoi(argv[i] - j);
 		else
-			add += atoi(argv[i]);
-		i++;
-		s = 0;
+			add += atoi(argv[i] - j);
+		i++, j = 0, s = 0;
 	}
 	printf("%d\n", add);
 	return (0);
