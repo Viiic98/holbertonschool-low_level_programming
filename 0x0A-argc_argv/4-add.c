@@ -11,10 +11,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, add;
+	int i, add, s;
 
-	i = 1;
-	add = 0;
+	i = 1, add = 0, s = 0;
 
 	if (argc == 1)
 	{
@@ -23,16 +22,32 @@ int main(int argc, char *argv[])
 	}
 	while (i < argc)
 	{
-		if (*argv[i] >= 48 && *argv[i] <= 57)
-			add += atoi(argv[i]);
-		else if (*argv[i] == 45)
-			add -= atoi(++argv[i]);
-		else
+		while (*argv[i] != '\0')
 		{
-			printf("Error\n");
-			return (0);
+			if (*argv[i] >= 48 && *argv[i] <= 57)
+			{
+				if (*(argv[i] + 1) != '\0')
+					++argv[i];
+				else
+					break;
+			}
+			else if (*argv[i] == 45)
+			{
+				s = 1;
+				++argv[i];
+			}
+			else
+			{
+				printf("Error\n");
+				return (0);
+			}
 		}
+		if (s == 1)
+			add -= atoi(argv[i]);
+		else
+			add += atoi(argv[i]);
 		i++;
+		s = 0;
 	}
 	printf("%d\n", add);
 	return (0);
