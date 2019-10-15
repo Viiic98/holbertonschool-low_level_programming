@@ -30,6 +30,9 @@ char *str_concat(char *s1, char *s2)
 
 	a = malloc(len * sizeof(char));
 
+	if (a == '\0')
+		return (NULL);
+
 	for (k = 0; k < len - 1; k++)
 	{
 		if (*s1 != '\0')
