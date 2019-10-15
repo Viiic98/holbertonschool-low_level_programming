@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
  * str_concat - Concatenate two strings
  *
@@ -48,6 +47,7 @@ char *str_concat(char *s1, char *s2)
 			s2++;
 		}
 	}
+	a[i] = '\0';
 
 	return (a);
 }
