@@ -1,11 +1,11 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
+ * malloc_checked - Checking the malloc
  *
+ * @b: type of data * number of data
  *
- *
- *
- *
+ * Return: The pointer or 98 if is null
  */
 void *malloc_checked(unsigned int b)
 {
@@ -13,7 +13,7 @@ void *malloc_checked(unsigned int b)
 
 	a = malloc(b);
 	if (a == NULL)
-		exit (98);
+		exit(98);
 
 	return (a);
 }
