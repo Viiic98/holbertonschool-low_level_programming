@@ -23,6 +23,11 @@ int main(int argc, char *argv[])
 
 	calc = get_op_func(operator)(num1, num2);
 
+	if (calc == '\0')
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	printf("%d\n", calc);
 	return (0);
 }
