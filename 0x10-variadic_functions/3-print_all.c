@@ -1,5 +1,5 @@
 #include "variadic_functions.h"
-#include <stdio.h>
+
 /**
  * print_c - Print chars
  * @c: list of arguments

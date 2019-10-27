@@ -1,6 +1,7 @@
 #ifndef VAR_FUNC
 #define VAR_FUNC
 #include <stdarg.h>
+#include <stdio.h>
 int _putchar(char);
 /**
  * struct ty - store the formats
