@@ -49,6 +49,7 @@ void print_s(va_list c)
 void print_all(const char * const format, ...)
 {
 	va_list ar;
+	char *separator = "";
 	unsigned int i, j;
 	type func[] = {
 		{"c", print_c},
@@ -68,9 +69,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == func[j].func)
 			{
+				printf("%s", separator);
 				func[j].p(ar);
-				if (format[i + 1] != '\0')
-					printf(", ");
+				separator = ", ";
 			}
 			j++;
 		}
