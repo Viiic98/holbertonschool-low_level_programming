@@ -50,7 +50,7 @@ void print_all(const char * const format, ...)
 {
 	va_list ar;
 	char *separator = "";
-	unsigned int i, j;
+	int i, j;
 	type func[] = {
 		{"c", print_c},
 		{"i", print_i},
@@ -72,6 +72,7 @@ void print_all(const char * const format, ...)
 				printf("%s", separator);
 				func[j].p(ar);
 				separator = ", ";
+				break;
 			}
 			j++;
 		}
