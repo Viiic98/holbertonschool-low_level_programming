@@ -37,7 +37,7 @@ void print_s(va_list c)
 	char *s;
 
 	s = va_arg(c, char *);
-	if (*s == '\0')
+	if (s == NULL)
 		s = "(nil)";
 	printf("%s", s);
 }
