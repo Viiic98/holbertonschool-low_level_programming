@@ -51,10 +51,10 @@ void print_all(const char * const format, ...)
 	va_list ar;
 	unsigned int i, j;
 	type func[] = {
-		{'c', print_c},
-		{'i', print_i},
-		{'f', print_f},
-		{'s', print_s},
+		{"c", print_c},
+		{"i", print_i},
+		{"f", print_f},
+		{"s", print_s},
 		{NULL, NULL},
 	};
 

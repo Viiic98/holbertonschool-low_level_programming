@@ -9,7 +9,7 @@ int _putchar(char);
  */
 typedef struct ty
 {
-	char func;
+	char *func;
 	void (*p)(va_list);
 } type;
 int sum_them_all(const unsigned int n, ...);
