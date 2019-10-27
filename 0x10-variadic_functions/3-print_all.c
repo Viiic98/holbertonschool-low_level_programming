@@ -52,10 +52,9 @@ void print_s(va_list c)
 void print_all(const char * const format, ...)
 {
 	va_list ar;
-	char *separator = "";
-	int i, j;
-
-	type func[] = {
+	int i = 0, j;
+	char *sep = "";
+	ty opt[] = {
 		{"c", print_c},
 		{"i", print_i},
 		{"f", print_f},
@@ -63,24 +62,26 @@ void print_all(const char * const format, ...)
 		{NULL, NULL},
 	};
 
-	i = 0;
 	va_start(ar, format);
 
 	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		while (*(func[j].p) != NULL)
+		while (opt[j].p != NULL)
 		{
-			if (format[i] == *(func[j].func))
+			if (*(opt[j].func) == format[i])
 			{
-				printf("%s", separator);
-				func[j].p(ar);
-				separator = ", ";
+				printf("%s", sep);
+				opt[j].p(ar);
+				sep = ", ";
+				break;
 			}
 			j++;
 		}
 		i++;
 	}
+
 	va_end(ar);
+
 	printf("\n");
 }
