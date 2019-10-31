@@ -17,9 +17,7 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	ptr = malloc(sizeof(list_t));
 	if (ptr == NULL)
-	{
 		return (NULL);
-	}
 	n_str = strdup(str);
 	if (n_str == NULL)
 	{
@@ -27,9 +25,22 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	(*ptr).len = strlen(str);
+	(*ptr).len = _strlen(n_str);
 	(*ptr).str = n_str;
 	(*ptr).next = *head;
 	*head = ptr;
 	return (*head);
+}
+/**
+ * _strlen - count the number of characters of a string
+ * @str: input string
+ * Return: number of characters
+ */
+int _strlen(char *str)
+{
+	int len = 0;
+
+	while (*str)
+		str++, len++;
+	return (len);
 }
