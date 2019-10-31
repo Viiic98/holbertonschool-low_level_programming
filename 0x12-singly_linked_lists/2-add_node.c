@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
+
 /**
  * add_node - add a new node
  * @head: struct pointer
@@ -25,6 +25,6 @@ list_t *add_node(list_t **head, const char *str)
 	(*ptr).len = strlen(str);
 	(*ptr).str = n_str;
 	(*ptr).next = *head;
-	printf("[%d] %s\n", (*ptr).len, (*ptr).str);
-	return (ptr);
+	*head = ptr;
+	return (*head);
 }
