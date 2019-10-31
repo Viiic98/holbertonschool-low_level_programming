@@ -1,70 +1,85 @@
 #include "variadic_functions.h"
-#include <stdio.h>
+
 /**
- * print_all - printing all
- *
- * @format: is a list of types of arguments
- * We can not change the value or pointer
- * Return: Nothing, is void
+ * print_c - Print chars
+ * @c: list of arguments
+ * Return: nothing
  */
-typedef struct ty
+void print_c(va_list c)
 {
-	char func;
+	printf("%c", va_arg(c, int));
+}
+/**
+ * print_i - print integers
+ * @c: list of arguments
+ * Return: nothing
+ */
+void print_i(va_list c)
+{
+	printf("%d", va_arg(c, int));
+}
+/**
+ * print_f - print floats
+ * @c: list of arguments
+ * Return: nothing
+ */
+void print_f(va_list c)
+{
+	printf("%f", va_arg(c, double));
+}
+/**
+ * print_s - print strings
+ * @c: list of arguments
+ * Return: nothing
+ */
+void print_s(va_list c)
+{
 	char *s;
-	void (*p)(void *);
-} type;
+
+	s = va_arg(c, char *);
+
+	if (s == NULL)
+		s = "(nil)";
+
+	printf("%s", s);
+}
+/**
+ * print_all - Main function that print
+ * @format: list of format
+ * Return: nothing
+ */
 void print_all(const char * const format, ...)
 {
 	va_list ar;
-	void *po;
-	unsigned int i, j;
-	type func[] = {
-		{'c', "char", print_c},
-		{'i', "int", print_i},
-		{'f', "float", print_f},
-		{'s', "char *", print_s},
-		{'\0', NULL, NULL},
+	int i = 0, j;
+	char *sep = "";
+	ty opt[] = {
+		{"c", print_c},
+		{"i", print_i},
+		{"f", print_f},
+		{"s", print_s},
+		{NULL, NULL},
 	};
-	
-	i = 0;
+
 	va_start(ar, format);
 
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		while (func[j].func != '\0')
+		while (opt[j].p != NULL)
 		{
-			if (func[j].func == format[i])
+			if (*(opt[j].func) == format[i])
 			{
-				po = va_arg(ar, func[j].s);
-				func[j].p(po);
-				if (format[i + 1] != '\0')
-					printf(", ");
-				break;
+				printf("%s", sep);
+				opt[j].p(ar);
+				sep = ", ";
 			}
 			j++;
 		}
 		i++;
 	}
-	printf("\n");
+
 	va_end(ar);
-}
-void print_c(void * c)
-{
-	printf("%c", c);
-}
-void print_i(void * c)
-{
-	printf("%d", c);
-}
-void print_f(void * c)
-{
-	printf("%f", c);
-}
-void print_s(void * c)
-{
-	if (*c == '\0')
-		printf("(nil)");
-	if (*c != '\0')
-		printf("%s", c);
+
+	printf("\n");
 }
