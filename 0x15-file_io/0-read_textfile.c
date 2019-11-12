@@ -7,22 +7,24 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, n = 0;
+	int fd;
+	ssize_t r, w;
 	char buf[letters];
 
-	fd = open(filename, O_RDONLY);
-	if (fd == 1)
+	fd = open(filename, O_RDONLY, 0400);
+	if (fd == -1)
 		return (0);
 
-	read(fd, buf, letters);
-	buf[letters] = '\0';
+	r = read(fd, buf, letters);
+	if (r == -1)
+	{
+		close(fd);
+		return (0);
+	}
 
-	printf("%s\n", buf);
-
-	while (buf[n])
-		n++;
+	w = write(1, buf, r);
 
 	close(fd);
 
-	return (n);
+	return (w);
 }
