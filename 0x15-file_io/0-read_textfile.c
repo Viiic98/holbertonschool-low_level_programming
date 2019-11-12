@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	printf("%s\n", buf);
 
-	while(buf[n])
+	while (buf[n])
 		n++;
 
 	close(fd);
