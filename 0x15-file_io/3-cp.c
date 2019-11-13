@@ -68,6 +68,6 @@ void _error_copy(char *file)
  */
 void _error_close(char *file)
 {
-	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", file);
 	exit(100);
 }
