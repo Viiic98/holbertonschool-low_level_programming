@@ -21,7 +21,7 @@ int main(int ac, char *argv[])
 
 	f[1] = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (f[1] == -1)
-		_error_origin(argv[2]);
+		_error_copy(argv[2]);
 
 	r = read(f[0], buffer, sizeof(buffer));
 	while (r > 0)
@@ -32,6 +32,8 @@ int main(int ac, char *argv[])
 		r = read(f[0], buffer, sizeof(buffer));
 	}
 
+	if (r == -1)
+		_error_origin(argv[1]);
 	c = close(f[0]);
 	if (c == -1)
 		_error_close(argv[1]);
