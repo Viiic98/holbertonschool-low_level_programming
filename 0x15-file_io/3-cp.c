@@ -19,7 +19,7 @@ int main(int ac, char *argv[])
 	if (f[0] == -1)
 		_error_origin(argv[1]);
 
-	f[1] = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	f[1] = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (f[1] == -1)
 		_error_origin(argv[2]);
 
