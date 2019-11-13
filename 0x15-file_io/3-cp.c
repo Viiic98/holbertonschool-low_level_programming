@@ -24,12 +24,13 @@ int main(int ac, char *argv[])
 		_error_origin(argv[2]);
 
 	r = read(f[0], buffer, sizeof(buffer));
-	if (r == -1)
-		_error_origin(argv[1]);
-
-	w = write(f[1], buffer, r);
-	if (w == -1)
-		_error_copy(argv[2]);
+	while(r > 0)
+	{
+		w = write(f[1], buffer, r);
+		if (w == -1)
+			_error_copy(argv[2]);
+		r = read(f[0], buffer, sizeof(buffer));
+	}
 
 	c = close(f[0]);
 	if (c == -1)
