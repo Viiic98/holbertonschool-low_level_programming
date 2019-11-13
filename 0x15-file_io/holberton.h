@@ -1,6 +1,6 @@
 #ifndef FILE_IO
 #define FILE_IO
-
+#define BUFFER 1024
 /* libraries */
 #include <stddef.h>
 #include <stdlib.h>
@@ -16,4 +16,8 @@ ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 
+/* side functions */
+void _error_origin(char *file);
+void _error_copy(char *file);
+void _error_close(char *file);
 #endif
