@@ -24,7 +24,7 @@ int main(int ac, char *argv[])
 		_error_origin(argv[2]);
 
 	r = read(f[0], buffer, sizeof(buffer));
-	while(r > 0)
+	while (r > 0)
 	{
 		w = write(f[1], buffer, r);
 		if (w == -1)
