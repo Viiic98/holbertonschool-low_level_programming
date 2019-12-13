@@ -5,3 +5,6 @@
 - Return the number of nodes
 ### dlistint_len
 - Return number of elements
+### add_dnodeint
+- Add a new node at the beginning
+- Return the address of the new node
