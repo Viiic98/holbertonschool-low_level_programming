@@ -8,3 +8,6 @@
 ### add_dnodeint
 - Add a new node at the beginning
 - Return the address of the new node
+### add_dnodeint_end
+- Add a new node at the end
+- Return the address of the new node
