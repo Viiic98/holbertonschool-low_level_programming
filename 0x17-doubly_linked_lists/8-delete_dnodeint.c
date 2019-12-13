@@ -1,7 +1,9 @@
 #include "lists.h"
 /**
- *
- *
+ * delete_dnodeint_at_index - delete a node with specific index
+ * @head: pointer to a linked list
+ * @index: index that will be deleted
+ * Return: 1 if success, -1 if it not
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -21,7 +23,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		*head = tmp->next;
 		(*head)->prev = NULL;
 		free(tmp);
-		return(1);
+		return (1);
 	}
 	tail = *head;
 	while (index > 1 && tail->next)
