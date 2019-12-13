@@ -15,3 +15,9 @@
 - Return the address of the new node
 ### free_dlistint
 - free a linked list
+### get_dnodeint
+- Get a node with a specific index
+- Return pointer to a new node
+### sum_dlistint
+- Sum the data of the nodes
+- Return the sum of all data of every node
