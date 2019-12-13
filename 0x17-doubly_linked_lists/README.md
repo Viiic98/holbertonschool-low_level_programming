@@ -21,3 +21,6 @@
 ### sum_dlistint
 - Sum the data of the nodes
 - Return the sum of all data of every node
+### insert_dnodeint
+- Insert a node in a specific position
+- Return address to new node or	NULL if it failed
