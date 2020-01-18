@@ -7,7 +7,7 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new;
-	hash_node_t *n_array;
+	hash_node_t **n_array;
 
 	if (size <= 0)
 		return (NULL);
@@ -18,14 +18,13 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	new->size = size;
 
-	n_array = calloc(size, sizeof(hash_node_t *));
+	n_array = calloc(size, sizeof(hash_node_t **));
 	if (n_array == NULL)
 	{
 		free(new);
-		free(n_array);
 		return (NULL);
 	}
-	new->array = &n_array;
+	new->array = n_array;
 
 	return (new);
 }
