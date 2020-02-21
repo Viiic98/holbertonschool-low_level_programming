@@ -3,6 +3,7 @@
 
 
 def island_perimeter(grid):
+    """ Find the parameter of a island """
     n = 0
     for i in range(len(grid)):
         j = 0
