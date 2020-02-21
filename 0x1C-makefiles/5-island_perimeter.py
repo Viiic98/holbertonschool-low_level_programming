@@ -5,16 +5,21 @@
 def island_perimeter(grid):
     n = 0
     for i in range(len(grid)):
-        f = 0
         for j in range(len(grid[i])):
             if grid[i][j]:
                 n += 1
                 if j + 1 < len(grid[i]):
                     if grid[i][j + 1]:
+                        print(i, j)
                         continue
-                elif i + 1 < len(grid):
-                    if grid[i + 1][j]:
-                        break
+                    elif i + 1 < len(grid):
+                        if grid[i + 1][j]:
+                            break
+                        else:
+                            if n > 1:
+                                return (n * 2) + 2
+                            else:
+                                return 4
     if n > 1:
         return (n * 2) + 2
     else:
