@@ -10,7 +10,6 @@ def island_perimeter(grid):
                 n += 1
                 if j + 1 < len(grid[i]):
                     if grid[i][j + 1]:
-                        print(i, j)
                         continue
                     elif i + 1 < len(grid):
                         if grid[i + 1][j]:
